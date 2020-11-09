@@ -351,10 +351,6 @@ section {
   .about__description {
     margin-bottom: var(--mb-5);
   }
-
-  .about__img {
-
-  }
 }
 
 @media screen and (max-width: 768px) {
