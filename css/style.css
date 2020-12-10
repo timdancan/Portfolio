@@ -280,6 +280,7 @@ section {
   object-fit: contain;
 }
 
+
 .project__overlay::before {
   display: block;
   content: '';
@@ -298,6 +299,10 @@ section {
 
 .project_name_petr {
   background-image: url(../image/avatar.png);
+}
+
+.project_name_mesto {
+  background-image: url(../image/mesto.png);
 }
 
 .project__overlay {
@@ -361,7 +366,8 @@ section {
 
 @media screen and (max-width: 875px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    width: 90%;
   }
 
   
