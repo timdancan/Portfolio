@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 :root {
   --header-height: 3rem;
   --h1-font-size: 1.5rem;
@@ -89,25 +91,49 @@ section {
   height: 70px;
   background-color: black;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0 30px;
+  z-index: 101;
+}
+
+.toggle {
+  width: 45px;
+  height: 45px;
+  background: white url(../image/menu.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  border-radius: 2px;
+  position: relative;
+}
+
+.toggle_active {
+  background-image: url(../image/close-button.svg);
+  background-size: 25px;
 }
 
 .header__link {
   font-size: 28px;
   text-decoration: none;
-  color: white;
+  color: black;
+  padding: 0;
   margin: 0;
-  margin-left: 3rem;
-  font-family: 'Courgette', cursive;
+  font-family: 'Poppins', sans-serif;
+  background: white;
   transition: opacity .2s linear;
 }
 
 .header__link:hover {
   opacity: 0.7;
+  background: #00bcd4;
 }
 
 .menu {
@@ -202,6 +228,70 @@ section {
   width: 184px;
 }
 
+.sidebar {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 100px;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+}
+
+.sidebar_active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+}
+
+.sidebar ul {
+  position: absolute;
+  right: 0;
+  top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  background: black;
+  margin: 0;
+}
+
+.sidebar ul li {
+  list-style: none;
+}
+
+.page-link {
+  transition: opacity .3s linear;
+}
+
+.page-link:hover {
+  opacity: 0.7;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  margin: 10px 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar ul li a:hover {
+  color: #00bcd4;
+}
+
 .button {
   display: inline-block;
   background-color: black;
@@ -230,11 +320,12 @@ section {
 }
 
 .about__container {
-  row-gap: 2rem
+  display: flex;
 }
 
 .about__data {
   text-align: center;
+  max-width: 450px;
 }
 
 .about__description {
@@ -245,11 +336,18 @@ section {
 
 .about__information {
   margin-bottom: var(--mb-4);
+  margin-top: 40px;
+}
+
+.about__img {
+  width: 100%;
 }
 
 .about__information-title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-2);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
 }
 
 .about__information-data {
@@ -257,6 +355,14 @@ section {
   align-items: center;
   padding-left: 1.5rem;
   margin-bottom: var(--mb-3);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.about__flex {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__information-icon {
@@ -264,6 +370,26 @@ section {
   margin-right: var(--mb-4);
 }
 
+.about .about__container h4 {
+  margin: 0;
+  font-weight: 300;
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--h3-font-size);
+  color: #333;
+}
+
+.about .about__container h4 span {
+  font-weight: 700;
+  color: #00bcd4;
+}
+
+.about .about__container h2 {
+  font-size: var(--h1-font-size);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  line-height: 1em;
+  color: #333;
+}
 
 .grid {
   display: grid;
@@ -272,6 +398,10 @@ section {
   width: 80%;
   max-width: 1330px;
   margin: 0 auto;
+}
+
+.tricks {
+  margin: 100px 0;
 }
 
 .project {
@@ -290,6 +420,18 @@ section {
 .project_name_how-to-study {
   background-image: url(../image/how-to-study.png);
   /* margin-right: 20px; */
+}
+
+.project_name_parallax {
+  background-image: url(../image/parallax.png);
+}
+
+.project_name_calculator {
+  background-image: url(../image/Calculator.png);
+}
+
+.project_name_video-slider {
+  background-image: url(../image/slider.png);
 }
 
 .project_name_across-russia {
@@ -331,18 +473,17 @@ section {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 3rem;
   padding-bottom: 0;
+  padding: 0 35px;
 }
 
 .footer__title{
   font-size: var(--h1-font-size);
-  margin-bottom: var(--mb-2);
 }
 
-.footer__description {
+/* .footer__description {
   margin-bottom: var(--mb-2);
-}
+} */
 
 .footer__copy {
   font-size: var(--smaller-font-size);
@@ -365,6 +506,19 @@ section {
 }
 
 @media screen and (max-width: 875px) {
+
+  .about__container {
+    flex-wrap: wrap;
+  }
+
+  .about__data {
+    margin: 0 auto;
+  }
+
+  .about__text {
+    margin-top: 30px;
+  }
+
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     width: 90%;

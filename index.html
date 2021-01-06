@@ -13,7 +13,8 @@
 </head>
 <body class="page">
   <header class="header">
-    <h1 class="centered-block"><a href="#" class="header__link">Ivanov D.</a></h1>
+    <h1 class="centered-block"><a href="#" class="header__link">My_Portfolio</a></h1>
+    <button class="toggle page-link"></button>
   </header>
 
   <section class="home" id="home">
@@ -23,10 +24,10 @@
           <img src="./image/LBVmKW_xSnQ.jpg" alt="Личное фото">
         </div>
         <h1 class="home__title">
-          Иванов Данил
+          Ivanov Danil
         </h1>
         <span class="home__profession">
-          Веб-разработчик
+          Front-End Developer
         </span>
         <div class="home__social">
           <a class="home__sociacl-link" href="https://github.com/timdancan" target="_blank"><i class="bx bxl-github" ></i></a>
@@ -34,40 +35,58 @@
           <a class="home__sociacl-link" href="https://www.instagram.com/malchishich/" target="_blank"><i class='bx bxl-instagram'></i></a>
           <a class="home__sociacl-link" href="https://www.facebook.com/profile.php?id=100001966399905" target="_blank"><i class='bx bxl-facebook-square'></i></a>
         </div>
-        <a href="./documents/Резюме — Веб-верстальщик, Данил Иванов.docx" download="" class="button home__button">Скачать</a>
+        <a href="./documents/Резюме — Веб-верстальщик, Данил Иванов (1).docx" download="" class="button home__button">
+          Download</a>
       </div>
       <nav class="menu centered-block page__menu">
-        <a href="#practice" class="menu__link">Мои работы</a>
-        <a href="#about" class="menu__link">Про меня</a>
+        <a href="#practice" class="menu__link">My works</a>
+        <a href="#about" class="menu__link">About me</a>
+        <a href="#tricks" class="menu__link">CSS, JS tricks</a>
       </nav>
     </div>
   </section>
 
+  <div class="sidebar">
+    <ul class="menu">
+      <li><a class="page-link" href="#">Home</a></li>
+      <li><a class="page-link" href="#about">About me</a></li>
+      <li><a class="page-link" href="#practice">My works</a></li>
+      <li><a class="page-link" href="#tricks">CSS, JS tricks</a></li>
+    </ul>
+  </div>
+
   <section id="about" class="about section">
-    <h2 class="section-title">Про меня</h2>
-    <div class="about__container bd-grid">
+    <h2 class="section-title">About me</h2>
+    <div class="about__container">
       <div class="about__data">
-        <p class="about__description">Начинающий веб-разработчик с огромным желанием развиваться</p>
-        <img src="" alt="">
+        <img class="about__img" src="./image/photo_2021-01-06_16-08-31.jpg" alt="I">
       </div>
-      <div class="about__information">
-        <h3 class="about__information-title">
-          Информация
-        </h3>
-        <div class="about__information-data">
-          <i class="bx bx-user about__informaton-icon">
-            <span>Иванов Данил</span>
-          </i>
+      <div class="about__flex">
+        <div class="about__text">
+          <h4><span>Hello,</span> I'm</h4>
+          <h2>Ivanov Danil</h2>
+          <h4>I'm a Front-End Web Developer.</h4>
+          <p class="about__description">A beginner web developer with a great desire to develop.</p>
         </div>
-        <div class="about__information-data">
-          <i class="bx bx-phone about__informaton-icon">
-            <span>0991517537</span>
-          </i>
-        </div>
-        <div class="about__information-data">
-          <i class="bx bx-envelope about__informaton-icon">
-            <span>d.ivanov.for@gmail.com</span>
-          </i>
+        <div class="about__information">
+          <h3 class="about__information-title">
+            Contact information
+          </h3>
+          <div class="about__information-data">
+            <i class="bx bx-user about__informaton-icon">
+              <span>Ivanov Danil</span>
+            </i>
+          </div>
+          <div class="about__information-data">
+            <i class="bx bx-phone about__informaton-icon">
+              <span>0991517537</span>
+            </i>
+          </div>
+          <div class="about__information-data">
+            <i class="bx bx-envelope about__informaton-icon">
+              <span>d.ivanov.for@gmail.com</span>
+            </i>
+          </div>
         </div>
       </div>
     </div>
@@ -75,28 +94,40 @@
 
     </section>
     <section class="practice" id="practice">
-      <h2 class="content__title">Мои работы</h2>
+      <h2 class="content__title">My works</h2>
       <ul class="grid list">
-        <li class="project project_name_how-to-study">
-          <a href="https://timdancan.github.io/how-to-learn/" class="project__overlay" target="_blank">CSS-анимации</a>
+        <li class="project project_name_mesto">
+          <a href="https://timdancan.github.io/mesto/" class="project__overlay" target="_blank">JavaScript project</a>
         </li>
         <li class="project project_name_across-russia">
-          <a href="https://timdancan.github.io/russian-travel/" class="project__overlay" target="_blank">Адаптивная вёрстка</a>
+          <a href="https://timdancan.github.io/russian-travel/" class="project__overlay" target="_blank">Adaptive</a>
         </li>
-        <li class="project project_name_mesto">
-          <a href="https://timdancan.github.io/mesto/" class="project__overlay" target="_blank">JavaScript проект</a>
+        <li class="project project_name_how-to-study">
+          <a href="https://timdancan.github.io/how-to-learn/" class="project__overlay" target="_blank">CSS-Animations</a>
         </li>
-        <li class="project project_name_petr">
-          <a href="https://timdancan.github.io/Petr/." class="project__overlay" target="_blank">Адаптивная вёрстка</a>
+      </ul>
+    </section>
+
+    <section class="tricks" id="tricks">
+      <h2 class="content__title">CSS, JS tricks</h2>
+      <ul class="grid list">
+        <li class="project project_name_parallax">
+          <a href="https://timdancan.github.io/parallax/" class="project__overlay" target="_blank">Parallax Scrolling</a>
+        </li>
+        <li class="project project_name_video-slider">
+          <a href="https://timdancan.github.io/slider/" class="project__overlay" target="_blank">Video slider</a>
+        </li>
+        <li class="project project_name_calculator">
+          <a href="https://timdancan.github.io/calculator/" class="project__overlay" target="_blank">Calculator</a>
         </li>
       </ul>
     </section>
   </main>
   <footer class="footer section">
     <div class="footer__container">
-      <h1 class="footer__title">Ну вроде как все</h1>
-      <p class="footer__description">Вы посмотрели мою личную страничку, спасибо за внимание</p>
-      <p class="footer__copy">Выполнил Иванов Данил - 2020</p>
+      <h1 class="footer__title">That's all</h1>
+      <p class="footer__description">You have looked at my personal page, thanks for your attention</p>
+      <p class="footer__copy">Completed Ivanov Danil - 2020</p>
     </div>
   </footer>
 
