@@ -393,7 +393,7 @@ section {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   width: 80%;
   max-width: 1330px;
@@ -419,6 +419,13 @@ section {
 
 .project_name_how-to-study {
   background-image: url(../image/how-to-study.png);
+}
+.project_name_geeckl {
+  background-image: url(../image/geeckle.png);
+}
+
+.project_name_pisma {
+  background-image: url(../image/pisma.png);
 }
 
 .project_name_parallax {
