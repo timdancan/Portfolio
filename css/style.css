@@ -452,8 +452,15 @@ section {
   background-image: url(../image/mediateka.png);
 }
 
+.project_name_pokemon-game {
+  background-image: url(../image/pokemon-game.png);
+}
+
 .project_name_mesto {
   background-image: url(../image/mesto.png);
+}
+.project_name_todo {
+  background-image: url(../image/todo.png);
 }
 
 .project_name_shop {
