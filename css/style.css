@@ -463,6 +463,10 @@ section {
   background-image: url(../image/todo.png);
 }
 
+.project_name_todo-js {
+  background-image: url(../image/todo-js.png);
+}
+
 .project_name_shop {
   background-image: url(../image/shop.png);
 }
